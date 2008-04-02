@@ -1,0 +1,12 @@
+Package: GEOmetadb
+Type: Package
+Title: A compilation of metadata from NCBI GEO
+Version: 0.9.3
+Date: 2008-03-25
+Depends: GEOquery,RSQLite
+Author: Jack Zhu and Sean Davis
+Maintainer: Jack Zhu <zhujack@mail.nih.gov>
+biocViews: Infrastructure
+Description: The NCBI Gene Expression Omnibus (GEO) represents the largest public repository of microarray data. However, finding data of interest can be challenging using current tools. GEOmetadb is an attempt to make access to the metadata associated with samples, platforms, and datasets much more feasible. This is accomplished by parsing all the NCBI GEO metadata into a SQLite database that can be stored and queried locally. GEOmetadb is simply a thin wrapper around the SQLite database along with associated documentation. Finally, the SQLite database is updated regularly as new data is added to GEO and can be downloaded at will for the most up-to-date metadata.
+URL: http://meltzerlab.nci.nih.gov/apps/geo
+License: Artistic-2.0
