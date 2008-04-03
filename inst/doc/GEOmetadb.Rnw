@@ -170,4 +170,14 @@ print(rs[1:5,],right=FALSE)
 @ 
 
 
+Finally, it is probably a good idea to close the connection, please see \Rpackage{DBI} for detail.
+<<>>=
+dbDisconnect(con)
+@
+
+If you want to remove old  GEOmetadb.sqlite file before retrieve a new version from the server, execute the following codes:
+<<>>=
+file.remove('GEOmetadb.sqlite')
+@
+
 \end{document}
