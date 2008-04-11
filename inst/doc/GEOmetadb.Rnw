@@ -151,6 +151,26 @@ getTableCounts <- function(tableName,conn) {
 do.call(rbind,sapply(geo_tables,getTableCounts,con,simplify=FALSE))
 @ 
 
+
+\subsection{Conversion of GEO entity types}
+
+Large-scale consumers of GEO data might want to convert GEO entity type from one to others, e.g. finding all GSM and  GSE associated with 'GPL96'. Function goeConvert does the conversion with a very fast mapping between entity types. 
+
+Covert 'GPL96' to other possible types in the GEOmetadb.sqlite.
+<<>>=
+conversion <- geoConvert('GPL96')
+@ 
+
+
+Check what GEO types and how many entities in each type in the conversion.
+<<>>=
+lapply(conversion, dim)
+conversion$gse[1:5,]
+conversion$gsm[1:5,]
+conversion$gds[1:5,]
+conversion$sMatrix[1:5,]
+@    
+
 \subsection{More advanced queries}
 Now, for something a bit more complicated, we would like to find all the human breast cancer-related Affymetrix gene expression GEO series.
 <<>>=
