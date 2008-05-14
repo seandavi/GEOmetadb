@@ -71,8 +71,9 @@ function(in_list, out_type = c('gse','gpl','gsm','gds','sMatrix'),sqlite_db_name
 	 	geo_out_list[out_type[i]] = list(rs)				
 	}
 	
+  dbDisconnect(sqlite_con);
 	return(geo_out_list);
 	## return (list (geo_out_list = geo_out_list, sql = sql))
-	dbDisconnect(sqlite_con);
+
 }
 
