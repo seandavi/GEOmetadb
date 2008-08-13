@@ -32,10 +32,12 @@
 ################################################################################
 
 geoConvert <-
-function(in_list, out_type = c('gse','gpl','gsm','gds','sMatrix'),sqlite_db_name='GEOmetadb.sqlite') {
+function(in_list, out_type = c('gse','gpl','gsm','gds','smatrix'),sqlite_db_name='GEOmetadb.sqlite') {
 	
 	out_type <- tolower(out_type);
 	out_type <- match.arg(out_type, several.ok = T)	
+	## to match to_acc type of sMatrix in geoConvert table, which is 'sMatrix', not 'smatrix' 
+	out_type <- sub('smatrix','sMatrix',out_type)
 	
 	## validate in_list
 	valid_in_type <- c('gse','gpl','gsm','gds')
