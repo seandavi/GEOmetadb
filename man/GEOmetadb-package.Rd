@@ -21,8 +21,8 @@ Query NCBI GEO metadata from a local SQLite database
 \tabular{ll}{
 Package: \tab GEOmetadb\cr
 Type: \tab Package\cr
-Version: \tab 0.9.0\cr
-Date: \tab 2008-03-20\cr
+Version: \tab 1.1.5\cr
+Date: \tab 2008-09-09\cr
 License: \tab Artistic-2.0\cr
 }
 }
@@ -32,7 +32,7 @@ Jack Zhu and Sean Davis
 Maintainer: Jack Zhu <zhujack@mail.nih.gov>
 }
 \references{
-http://meltzerlab.nci.nih.gov/apps/geo
+http://meltzerlab.nci.nih.gov/apps/geo, http://gbnci.abcc.ncifcrf.gov/geo/
 }
 \keyword{ package }
 \examples{
