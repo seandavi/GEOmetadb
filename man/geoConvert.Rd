@@ -8,7 +8,7 @@
   entity types to facilitate queries of this type.
 }
 \usage{
-geoConvert(in_list, out_type = c("gse", "gpl", "gsm", "gds", "sMatrix"), sqlite_db_name = "GEOmetadb.sqlite")
+geoConvert(in_list, out_type = c("gse", "gpl", "gsm", "gds", "smatrix"), sqlite_db_name = "GEOmetadb.sqlite")
 }
 \arguments{
   \item{in_list}{Character vector of GEO entities to convert from.}
@@ -19,7 +19,7 @@ geoConvert(in_list, out_type = c("gse", "gpl", "gsm", "gds", "sMatrix"), sqlite_
   A list of data.frames.
   
 }
-\references{http://meltzerlab.nci.nih.gov/apps/geo}
+\references{http://meltzerlab.nci.nih.gov/apps/geo, http://gbnci.abcc.ncifcrf.gov/geo/}
 \author{Jack Zhu <zhujack@mail.nih.gov>}
 \examples{
 if(file.exists("GEOmetadb.sqlite")) {
