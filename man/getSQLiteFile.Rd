@@ -19,7 +19,7 @@ getSQLiteFile(destdir = getwd(), destfile = "GEOmetadb.sqlite.gz")
 
   Returns the local filename for use later.
 }
-\references{http://meltzerlab.nci.nih.gov/apps/geo}
+\references{http://meltzerlab.nci.nih.gov/apps/geo, http://gbnci.abcc.ncifcrf.gov/geo/}
 \author{Sean Davis <sdavis2@mail.nih.gov>}
 \examples{
 \dontrun{geometadbfile <- getSQLiteFile()}
