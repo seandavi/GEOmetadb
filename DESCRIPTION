@@ -1,8 +1,8 @@
 Package: GEOmetadb
 Type: Package
 Title: A compilation of metadata from NCBI GEO
-Version: 1.1.4
-Date: 2008-09-08
+Version: 1.1.5
+Date: 2008-09-09
 Depends: GEOquery,RSQLite
 Author: Jack Zhu and Sean Davis
 Maintainer: Jack Zhu <zhujack@mail.nih.gov>
