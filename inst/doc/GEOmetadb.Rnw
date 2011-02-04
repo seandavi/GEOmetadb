@@ -171,6 +171,15 @@ conversion$gds[1:5,]
 conversion$sMatrix[1:5,]
 @    
 
+\subsection{Mappings between GPL and Bioconductor microarry annotation packages}
+The function getBiocPlatformMap is to get GPL information of a given list of Bioconductor microarry annotation packages. Note currently the GEOmetadb does not contains all the mappings, but we are trying to construct a relative complete list.   
+
+Get GPL information of 'hgu133a' and 'hgu95av2':
+<<>>=
+getBiocPlatformMap(con, bioc=c('hgu133a','hgu95av2'))
+@
+
+
 \subsection{More advanced queries}
 Now, for something a bit more complicated, we would like to find all the human breast cancer-related Affymetrix gene expression GEO series.
 <<>>=
