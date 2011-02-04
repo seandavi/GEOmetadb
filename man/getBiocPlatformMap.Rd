@@ -21,7 +21,7 @@ getBiocPlatformMap(con, bioc='all')
 if(file.exists('GEOmetadb.sqlite')) {
     con <- dbConnect(SQLite(), "GEOmetadb.sqlite")
 	getBiocPlatformMap(con)[1:5,]
-	getBiocPlatformMap(con, bioc=c('hgu13a','hgu95av2'))
+	getBiocPlatformMap(con, bioc=c('hgu133a','hgu95av2'))
 	dbDisconnect(con)
 } else {
   print("You will need to usethe getSQLiteFile() function to get a copy
