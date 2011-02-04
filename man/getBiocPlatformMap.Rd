@@ -2,7 +2,7 @@
 \alias{getBiocPlatformMap}
 \title{Get mappings between GPL and Bioconductor microarry annotation packages}
 \description{
-  Query the gpl table and get mappings between GPL and all or specific Biocondoctor microarry annotation packages.
+  Query the gpl table and get GPL information of a given list of Bioconductor microarry annotation packages. Note currently the GEOmetadb does not contains all the mappings, but we are trying to construct a relative complete list.
 }
 \usage{
 getBiocPlatformMap(con, bioc='all')
@@ -21,6 +21,7 @@ getBiocPlatformMap(con, bioc='all')
 if(file.exists('GEOmetadb.sqlite')) {
     con <- dbConnect(SQLite(), "GEOmetadb.sqlite")
 	getBiocPlatformMap(con)[1:5,]
+	getBiocPlatformMap(con, bioc=c('hgu13a','hgu95av2'))
 	dbDisconnect(con)
 } else {
   print("You will need to usethe getSQLiteFile() function to get a copy
