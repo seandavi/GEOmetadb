@@ -2,7 +2,8 @@
 function(destdir=getwd(),destfile='GEOmetadb.sqlite.gz') {
   localfile <- file.path(destdir,destfile)
   # download.file('http://meltzerlab.nci.nih.gov/apps/geo/GEOmetadb.sqlite.gz', destfile=localfile,mode='wb')
-  download.file('http://gbnci.abcc.ncifcrf.gov/geo/GEOmetadb.sqlite.gz', destfile=localfile,mode='wb')
+  #download.file('http://gbnci.abcc.ncifcrf.gov/geo/GEOmetadb.sqlite.gz', destfile=localfile,mode='wb')
+  download.file('http://watson.nci.nih.gov/~zhujack/GEOmetadb.sqlite.gz', destfile=localfile,mode='wb')
   require(GEOquery) ### for gunzip
   cat('Unzipping...\n')
   gunzip(localfile,overwrite=TRUE)
