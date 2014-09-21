@@ -9,3 +9,8 @@
 
 # RStudio files
 .Rproj.user/
+.Rproj.user
+vignettes/GEOmetadb_cache
+GEOmetadb.Rproj
+.Rbuildignore
+vignettes/GEOmetadb.sqlite.gz
