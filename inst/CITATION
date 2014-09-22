@@ -1,0 +1,23 @@
+citHeader("Please cite the following if utilizing the GEOmetadb software: ")
+citEntry(entry="article",
+author="Yuelin Zhu 
+and Sean Davis
+and Robert Stephens
+and Paul S. Meltzer 
+and Yidong Chen",
+title="GEOmetadb: powerful alternative search engine for the Gene Expression Omnibus.",
+journal="Bioinformatics (Oxford, England)",
+year="2008",
+month="Dec",
+day="01",
+volume="24",
+number="23",
+pages="2798--2800",
+abstract="The NCBI Gene Expression Omnibus (GEO) represents the largest public repository of microarray data. However, finding data in GEO can be challenging. We have developed GEOmetadb in an attempt to make querying the GEO metadata both easier and more powerful. All GEO metadata records as well as the relationships between them are parsed and stored in a local MySQL database. A powerful, flexible web search interface with several convenient utilities provides query capabilities not available via NCBI tools. In addition, a Bioconductor package, GEOmetadb that utilizes a SQLite export of the entire GEOmetadb database is also available, rendering the entire GEO database accessible with full power of SQL-based queries from within R.",
+issn="1367-4811",
+doi="10.1093/bioinformatics/btn520",
+url="http://www.ncbi.nlm.nih.gov/pubmed/18842599",
+language="eng",
+textVersion="Zhu Y, Davis S, Stephens R, Meltzer PS, Chen Y. GEOmetadb: powerful alternative search engine for the Gene Expression Omnibus. Bioinformatics. 2008 Dec 1;24(23):2798-800. doi: 10.1093/bioinformatics/btn520. Epub 2008 Oct 7. PubMed PMID: 18842599; PubMed Central PMCID: PMC2639278.")
+
+
