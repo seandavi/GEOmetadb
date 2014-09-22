@@ -50,7 +50,7 @@ We have faithfully parsed and maintained in GEO when creating *GEOmetadb*.  This
 ```{r include=FALSE}
 library(knitr)
 options(width=55)
-opts_chunk$set(cache=TRUE)
+opts_chunk$set(cache=TRUE,message=FALSE,warning=FALSE)
 ```
 
 # Getting Started
@@ -223,6 +223,45 @@ print(rs[1:5,],right=FALSE)
 ``` 
 
 
+
+
+## A wordcloud of GSE titles
+
+Since we have all the data from NCBI GEO available, why not look around a bit.  The next code block creates a wordcloud using the *tm* and *wordcloud* packages based on the titles of all GSE records.
+
+```{r fig.width=10}
+library(tm)
+library(wordcloud)
+gseTitles = dbGetQuery(con,"select title from gse")
+corp = VCorpus(VectorSource(gseTitles))
+corp <- tm_map(corp, removePunctuation)
+corp <- tm_map(corp, content_transformer(tolower))
+corp <- tm_map(corp, removeNumbers)
+corp <- tm_map(corp, function(x)removeWords(x,stopwords()))
+term.matrix <- TermDocumentMatrix(corp)
+term.matrix <- as.matrix(term.matrix)
+v <- sort(rowSums(term.matrix),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+n = 100
+wordcloud(d[1:n,]$word,d[1:n,]$freq)
+```
+
+## Using dplyr with GEOmetadb
+
+The [dplyr package](http://cran.rstudio.com/web/packages/dplyr/) provides a very streamlined functional approach to [accessing SQL databases](http://cran.rstudio.com/web/packages/dplyr/vignettes/databases.html). 
+
+Load the *dplyr* library and connect to the `GEOmetadb.sqlite` database.  The *dplyr* package is written around manipulation of tabular data, so we will work with only one GEOmetadb table, the `gse` table. Instead of using SQL, we can use *dplyr* verbs to get information from tables of interest.
+
+```{r}
+library(dplyr)
+db = src_sqlite('vignettes/GEOmetadb.sqlite')
+gse = tbl(db,'gse')
+filter(gse,gse=='GSE2553')
+```
+
+
+## Cleanup
+
 Finally, it is probably a good idea to close the connection. Please see the *DBI* package for details on this point.
 
 ```{r}
@@ -234,4 +273,3 @@ If you want to remove old  GEOmetadb.sqlite file before retrieve a new version f
 ```{r}
 #file.remove('GEOmetadb.sqlite')
 ```
-
