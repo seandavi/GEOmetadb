@@ -271,5 +271,5 @@ dbDisconnect(con)
 If you want to remove old  GEOmetadb.sqlite file before retrieve a new version from the server, execute the following codes:
 
 ```{r}
-#file.remove('GEOmetadb.sqlite')
+file.remove('GEOmetadb.sqlite')
 ```
