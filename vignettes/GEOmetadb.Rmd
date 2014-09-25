@@ -254,7 +254,7 @@ Load the *dplyr* library and connect to the `GEOmetadb.sqlite` database.  The *d
 
 ```{r}
 library(dplyr)
-db = src_sqlite('vignettes/GEOmetadb.sqlite')
+db = src_sqlite('GEOmetadb.sqlite')
 gse = tbl(db,'gse')
 filter(gse,gse=='GSE2553')
 ```
