@@ -116,10 +116,10 @@ There is also the `dbListFields` function that can list database fields associat
 dbListFields(con,'gse')
 ``` 
 
-Sometimes it is useful to get the actual SQL schema associated with a table.  As an example of doing this and using an *RSQLite* shortcut function, `sqliteQuickSQL`, we can get the table schema for the `gpl` table.
+Sometimes it is useful to get the actual SQL schema associated with a table.  Here, we get the table schema for the `gpl` table.
 
 ```{r}
-sqliteQuickSQL(con,'PRAGMA TABLE_INFO(gpl)')
+dbGetQuery(con,'PRAGMA TABLE_INFO(gpl)')
 ``` 
 
 ## Writing SQL queries and getting results
@@ -272,4 +272,10 @@ If you want to remove old  GEOmetadb.sqlite file before retrieve a new version f
 
 ```{r}
 file.remove('GEOmetadb.sqlite')
+```
+
+# sessionInfo()
+
+```{r}
+sessionInfo()
 ```
