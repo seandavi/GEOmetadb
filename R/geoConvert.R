@@ -60,8 +60,6 @@ function(in_list, out_type = c('gse','gpl','gsm','gds','smatrix'),sqlite_db_name
 	##Eliminate self converion
 	if(length(out_type) == 0) stop("Not necessary to convert to input itself, are you out of mind?");
 		
-	library(RSQLite);	
-	
 	sqlite_con <- dbConnect(dbDriver("SQLite"), sqlite_db_name)
 
 	geo_out_list = list();

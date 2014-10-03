@@ -13,11 +13,9 @@ function(destdir=getwd(),destfile='GEOmetadb.sqlite.gz') {
   }
 
   download.file(url_geo, destfile=localfile,mode='wb')
-  require(GEOquery) ### for gunzip
   cat('Unzipping...\n')
   gunzip(localfile,overwrite=TRUE)
   unzippedlocalfile <- gsub('[.]gz$','',localfile)
-  require(RSQLite)
   con <- dbConnect(SQLite(),unzippedlocalfile)
   dat <- dbGetQuery(con,'select * from metaInfo')
   dbDisconnect(con)
