@@ -10,6 +10,7 @@ before_install:
 install:
   - ./travis-tool.sh install_bioc GEOquery
   - ./travis-tool.sh install_deps
+  - ./travis-tool.sh install_r RSQLite.extfuns
 
 script: ./travis-tool.sh run_tests
 
