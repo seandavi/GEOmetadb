@@ -1,1 +1,3 @@
+import(RSQLite)
+importFrom(GEOquery, gunzip)
 exportPattern("^[[:alpha:]]+")
