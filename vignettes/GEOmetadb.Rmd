@@ -17,6 +17,9 @@ output:
 %\VignetteKeywords{GEOmetadb}
 %\VignettePackage{GEOmetadb}
 -->
+
+![Build Status](https://travis-ci.org/seandavi/GEOmetadb.png?branch=master)
+
 # Overview of *GEOmetadb*
 
 The NCBI Gene Expression Omnibus (GEO) represents the largest repository of microarray data in existence.  One difficulty in dealing with GEO is finding the microarray data that is of interest.  As part of the NCBI Entrez search system, GEO can be searched online via web pages or using NCBI Eutils.  However, the web search is not as full-featured as it could be, particularly for programmatic access.  NCBI Eutils offers another option for finding data within the vast stores of GEO, but it is cumbersome to use, often requiring multiple complicated Eutils calls to get at the relevant information.  We have found it **absolutely critical** to have ready access not just to the microarray data, but to the metadata describing the microarray experiments.  To this end we have created *GEOmetadb*.
