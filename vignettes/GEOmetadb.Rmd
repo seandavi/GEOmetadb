@@ -18,7 +18,13 @@ output:
 %\VignettePackage{GEOmetadb}
 -->
 
+<!--
+Commenting out travis build status because it causes issues on windows,
+see 
+https://groups.google.com/forum/#!msg/pandoc-discuss/rdn_DDduVAs/Seu3Vne7k1sJ
+
 ![Build Status](https://travis-ci.org/seandavi/GEOmetadb.png?branch=master)
+-->
 
 # Overview of *GEOmetadb*
 
