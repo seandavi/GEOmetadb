@@ -3,7 +3,7 @@ function(destdir=getwd(),destfile='GEOmetadb.sqlite.gz') {
   localfile <- file.path(destdir,destfile)
   url_geo_1 = 'http://gbnci.abcc.ncifcrf.gov/geo/GEOmetadb.sqlite.gz'
   url_geo_2 = 'http://watson.nci.nih.gov/~zhujack/GEOmetadb.sqlite.gz'
-  url_geo_3 = 'http://dl.dropbox.com/u/51653511/GEOmetadb.sqlite.gz'
+  url_geo_3 = 'https://dl.dropboxusercontent.com/u/51653511/GEOmetadb.sqlite.gz'
   if(! inherits(try(url(url_geo_1, open='rb'), silent = TRUE), "try-error") ) {
      url_geo = url_geo_1
   } else if(! inherits(try(url(url_geo_2, open='rb'), silent = TRUE), "try-error") ) {
